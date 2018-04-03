@@ -16,6 +16,11 @@ namespace Hello
             //    Console.WriteLine("Witaj, " + item);
             //}
 
+            foreach (var item in args)
+            {
+                Console.WriteLine("Witaj, " + item);
+            }
+
         }
     }
 }
