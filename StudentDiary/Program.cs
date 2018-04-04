@@ -12,25 +12,48 @@ namespace StudentDiary
         {
             Diary diary = new Diary();
 
-            //diary.AddRating(5);
-            //diary.AddRating(8.5f);
-            //diary.AddRating(4.7f);
-            //float avg = diary.CalculateAverage();
-            //float max = diary.GivenMaxRating();
-            //float min = diary.GivenMinRating();
+            // *************************************************************************************
+            // to jest czesc programu z odcinka 12
+            // *************************************************************************************
+            diary.AddRating(5);
+            diary.AddRating(8.5f);
+            diary.AddRating(4.7f);
+            diary.AddRating(1.2f);
+            diary.AddRating(9.6f);
 
+            DiaryStatistics stats = diary.ComputeStatistics();
+
+            Console.WriteLine("Srednia ocen: " + stats.AverageGrade);
+            Console.WriteLine("Maksymalna ocena: " + stats.MaxGrade);
+            Console.WriteLine("Minimalna ocena: " + stats.MinGrade);
+            // -------------------------------------------------------------------------------------
+
+            // *************************************************************************************
+            // to jest czesc programu z wczesniejszych odcinkow
+            // *************************************************************************************
+            /*
+            diary.AddRating(5);
+            diary.AddRating(8.5f);
+            diary.AddRating(4.7f);
+            float avg = diary.CalculateAverage();
+            float max = diary.GivenMaxRating();
+            float min = diary.GivenMinRating();
+            */ // ----------------------------------------------------------------------------------
+
+            // *************************************************************************************
+            // to jest czesc programu z wczesniejszych odcinkow
+            // *************************************************************************************
+            /*
             for (; ; )
             {
                 Console.WriteLine("Podaj ocene z zakresu 1-10. (11 konczy wprowadzanie ocen) ");
                 float rating;
                 bool result = float.TryParse(Console.ReadLine(), out rating);       // wczytywanie oceny z konsoli i wpisywanie do rating
                                                                                     // zabezpieczenie przed wpisywaniem liter zamiast cyfr
-
                 if (rating == 11)       // 11 zatrzymuje petle do wpisywania ocen
                 {
                     break;
                 }
-
                 if (result)
                 {
                     if (rating > 0 && rating <= 10) // jezeli liczba miesi sie w zakresie 1-10 to dopisz ja do dzienniczka
@@ -43,11 +66,11 @@ namespace StudentDiary
                     }
                 }
             }
-
             Console.WriteLine("Srednia twoich ocento: " + diary.CalculateAverage());
             Console.WriteLine("Najwyzsza ocena to: " + diary.GivenMaxRating());
             Console.WriteLine("Najnizsza ocena to: " + diary.GivenMinRating());
-            
+            */ // ----------------------------------------------------------------------------------
+
             Console.ReadKey();
         }
     }
