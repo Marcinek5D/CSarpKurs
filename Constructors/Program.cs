@@ -14,8 +14,6 @@ namespace Constructors
             Person person2 = new Person(2, "Tomek");
             Person person3 = new Person(3, "Tomek", "Nowak");
             Person person4 = new Person(4, "Tomek", "Nowak", "Katowice", 18, "Mezczyzna");
-
-
         }
     }
 }
