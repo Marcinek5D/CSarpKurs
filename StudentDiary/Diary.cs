@@ -6,8 +6,13 @@ namespace StudentDiary
 {
     class Diary
     {
+        public Diary()
+        {
+            ratings = new List<float>();    // inicjalizacja listy w konstruktorze
+        }
+
         // stan (zmienne - pola)
-        List<float> ratings = new List<float>();    // delkaracja listy ocen typu float
+        List<float> ratings;                // delkaracja listy ocen typu float
         
         // zachowania/metody
         public void AddRating(float rating) // dodawanie oceny
