@@ -19,7 +19,6 @@ namespace Odcinek10_klasa_a_zmienna
 
             Diary diary3 = diary;       // diary3 i diary wskazuja na ten sam obiekt
             diary3.AddRating(8);
-
         }
     }
 }
