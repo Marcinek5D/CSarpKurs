@@ -13,29 +13,41 @@ namespace StudentDiary
             Diary diary = new Diary();
 
             // *************************************************************************************
-            // to jest czesc programu z odcinka 12/14
+            // to jest czesc programu z odcinka 15 - typy referencyjne
             // *************************************************************************************
-            diary.AddRating(5);
-            diary.AddRating(8.5f);
-            diary.AddRating(4.7f);
-            diary.AddRating(1.2f);
-            diary.AddRating(9.6f);
+            Diary d1 = new Diary();
+            Diary d2 = d1;          // d2 wskazuje na ten sam obiekt co d1 (to nie jest skopiowanie danych z d1 do d2!!!!)
 
-            DiaryStatistics stats = diary.ComputeStatistics();
+            d1 = new Diary();       // d1 wskazuje teraz na nowy obiekt (inny niz d2), d1 i d2 wskazuja na dwa rozne obiekty
+            d1.Name = "Dzienniczek Marcina";
 
-            Console.WriteLine("Srednia ocen: " + stats.AverageGrade);
-            Console.WriteLine("Maksymalna ocena: " + stats.MaxGrade);
-            Console.WriteLine("Minimalna ocena: " + stats.MinGrade);
+            Console.WriteLine(d2.Name);
+            // -------------------------------------------------------------------------------------
 
-            Console.WriteLine("\n" + "Diary.MaxGrade = " + Diary.MaxGrade + "\n");
+            // *************************************************************************************
+            // to jest czesc programu z odcinka 12/14 - STATIC
+            // *************************************************************************************
+            //diary.AddRating(5);
+            //diary.AddRating(8.5f);
+            //diary.AddRating(4.7f);
+            //diary.AddRating(1.2f);
+            //diary.AddRating(9.6f);
 
-            Diary diary2 = new Diary();
-            Diary diary3 = new Diary();
-            Diary diary4 = new Diary();
-            Diary diary5 = new Diary();
-            Diary diary6 = new Diary();
+            //DiaryStatistics stats = diary.ComputeStatistics();
 
-            Console.WriteLine("Liczba dzienniczkow: " + Diary.Count);
+            //Console.WriteLine("Srednia ocen: " + stats.AverageGrade);
+            //Console.WriteLine("Maksymalna ocena: " + stats.MaxGrade);
+            //Console.WriteLine("Minimalna ocena: " + stats.MinGrade);
+
+            //Console.WriteLine("\n" + "Diary.MaxGrade = " + Diary.MaxGrade + "\n");
+
+            //Diary diary2 = new Diary();
+            //Diary diary3 = new Diary();
+            //Diary diary4 = new Diary();
+            //Diary diary5 = new Diary();
+            //Diary diary6 = new Diary();
+
+            //Console.WriteLine("Liczba dzienniczkow: " + Diary.Count);
             // -------------------------------------------------------------------------------------
 
             // *************************************************************************************

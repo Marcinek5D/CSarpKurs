@@ -15,13 +15,15 @@ namespace StudentDiary
         }
 
         // stan (zmienne - pola)
-        private List<float> ratings;                // delkaracja listy ocen typu float
+        private List<float> ratings;        // delkaracja listy ocen typu float
 
         public static float MinGrade = 0;           // dzieki "static" mozna odwolac sie do tych wartosci nawet bez tworzenia obiektow klasy Diary
         public static float MaxGrade = 10;          // ("static" jest dostepne z poziomu klast a nie obiektu!!!!)
         public static long Count = 0;       // zlicza ilosc dzienniczkow w naszym programie
 
         public long Count2 = 0;             // dla pokazania ze zwykla zmienna rozni sie od "static" i jest dostepna z poziomu obiektu, a nie samej klasy
+
+        public string Name;                 // nazwa obiektu/dzienniczka
 
         // zachowania/metody
 
@@ -34,8 +36,7 @@ namespace StudentDiary
             if (rating > 0 && rating <= 10)
             {
                 ratings.Add(rating);
-            }
-            
+            } 
         }
 
         /// <summary>
