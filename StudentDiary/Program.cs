@@ -13,7 +13,7 @@ namespace StudentDiary
             Diary diary = new Diary();
 
             // *************************************************************************************
-            // to jest czesc programu z odcinka 12
+            // to jest czesc programu z odcinka 12/14
             // *************************************************************************************
             diary.AddRating(5);
             diary.AddRating(8.5f);
@@ -26,6 +26,16 @@ namespace StudentDiary
             Console.WriteLine("Srednia ocen: " + stats.AverageGrade);
             Console.WriteLine("Maksymalna ocena: " + stats.MaxGrade);
             Console.WriteLine("Minimalna ocena: " + stats.MinGrade);
+
+            Console.WriteLine("\n" + "Diary.MaxGrade = " + Diary.MaxGrade + "\n");
+
+            Diary diary2 = new Diary();
+            Diary diary3 = new Diary();
+            Diary diary4 = new Diary();
+            Diary diary5 = new Diary();
+            Diary diary6 = new Diary();
+
+            Console.WriteLine("Liczba dzienniczkow: " + Diary.Count);
             // -------------------------------------------------------------------------------------
 
             // *************************************************************************************

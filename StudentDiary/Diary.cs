@@ -10,10 +10,18 @@ namespace StudentDiary
         public Diary()
         {
             ratings = new List<float>();    // inicjalizacja listy w konstruktorze
+            Count++;                        // zwieksza licznik dzienniczkow w naszym programie
+            Count2++;
         }
 
         // stan (zmienne - pola)
-        List<float> ratings;                // delkaracja listy ocen typu float
+        private List<float> ratings;                // delkaracja listy ocen typu float
+
+        public static float MinGrade = 0;           // dzieki "static" mozna odwolac sie do tych wartosci nawet bez tworzenia obiektow klasy Diary
+        public static float MaxGrade = 10;          // ("static" jest dostepne z poziomu klast a nie obiektu!!!!)
+        public static long Count = 0;       // zlicza ilosc dzienniczkow w naszym programie
+
+        public long Count2 = 0;             // dla pokazania ze zwykla zmienna rozni sie od "static" i jest dostepna z poziomu obiektu, a nie samej klasy
 
         // zachowania/metody
 
@@ -23,7 +31,11 @@ namespace StudentDiary
         /// <param name="rating">nowa ocena</param>     // "nowa ocena" - komentarz opisujacy dany parametr
         public void AddRating(float rating) // dodawanie oceny
         {
-            ratings.Add(rating);
+            if (rating > 0 && rating <= 10)
+            {
+                ratings.Add(rating);
+            }
+            
         }
 
         /// <summary>
@@ -50,7 +62,7 @@ namespace StudentDiary
         // *************************************************************************************
         // to jest niepotrzebne przez odcinek 12 - wszystko jest liczone wyrzej przez metode ComputeStatistics()
         // *************************************************************************************
-        /*
+         /*
         /// <summary>
         /// Obliczamy srednia naszych ocen
         /// </summary>
